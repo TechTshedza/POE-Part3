@@ -54,6 +54,18 @@ class Task {
         return duration;
     }
     
+// Getters
+    public String getTaskName() {
+        return taskName;
+    }
+
+    public String getDeveloperDetails() {
+        return developerDetails;
+    }
+
+    public String getTaskStatus() {
+        return taskStatus;
+    }
 }
     
 

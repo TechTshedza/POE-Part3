@@ -43,4 +43,18 @@ public class MainTest {
         login.registerUser("kyl_1", "Ch&&sec@ke99!", "Kyle", "Smith");
         assertEquals("Welcome Kyle, Smith, it is great to see you again.", login.loginUser("kyl_1", "Ch&&sec@ke99!"));
     }
+@Test
+public void testTaskCreation() {
+        Task task = new Task("Login Feature", "Authenticate users", "Mike Smith", 5, "To Do");
+        assertTrue(task.checkTaskDescription());
+        assertEquals("LI: 1: D", task.createTaskID());
+    }
+
+    @Test
+    public void testLongestDuration() {
+        TaskManager manager = new TaskManager();
+        manager.addTask(new Task("Task 1", "Short task", "Dev A", 3, "Done"));
+        manager.addTask(new Task("Task 2", "Longer task", "Dev B", 8, "Doing"));
+        assertEquals("Dev B, 8", manager.findLongestDuration());
+    }
 }

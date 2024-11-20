@@ -71,8 +71,7 @@ public class Main {
             Task task = new Task(taskName, taskDescription, developerDetails, duration, taskStatus);
 
             if (task.checkTaskDescription()) {
-                tasks.add(task);
-                totalHours += task.returnTotalHours();
+              
                 JOptionPane.showMessageDialog(null, "Task successfully captured!\n" + task.printTaskDetails());
             } else {
                 JOptionPane.showMessageDialog(null, "Please enter a task description of less than 50 characters.");
